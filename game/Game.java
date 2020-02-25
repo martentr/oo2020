@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -7,8 +8,15 @@ public class Game {
 
     public static void main(String[] args) {
         World world = new World(20, 10);
-        Character player = new Character("Raimo", CharacterType.WARRIOR);
-        Character enemy = new Character("Sipsik", CharacterType.WIZARD);
+        Character player = new Character("Raimo", CharacterType.PLAYER, "X");
+        Character enemy = new Character("Sipsik", CharacterType.MONSTER, "o");
+        Character npc = new Character("Helper", CharacterType.NPC, "N");
+
+        world.addCharacters(Arrays.asList(
+            enemy, 
+            npc, 
+            player
+        ));
 
         Scanner scanner = new Scanner(System.in);
 

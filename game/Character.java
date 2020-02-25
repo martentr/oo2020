@@ -7,16 +7,18 @@ public class Character {
     public int y;
 
     public String slogan = "";
+    private String symbol = "?";
 
     private String name;
     private CharacterType characterType;
     public Direction direction;
     private Inventory inventory;
 
-    public Character(String name, CharacterType characterType){
+    public Character(String name, CharacterType characterType, String symbol){
         this.name = name;
         this.characterType = characterType;
         this.direction = Direction.RIGHT;
+        this.symbol = symbol;
 
         this.x = 1;
         this.y = 1;

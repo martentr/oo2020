@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * World
  */
@@ -5,10 +7,15 @@ public class World {
 
     private int width;
     private int height;
+    List<Character> characters;
 
     public World(int width, int height){
         this.width = width;
         this.height = height;
+    }
+
+    void addCharacters(List<Character> c){
+        this.characters = c;
     }
 
     void render(){

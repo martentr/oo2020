@@ -1,3 +1,3 @@
 enum CharacterType {
-    WARRIOR, WIZARD, GOBLIN
+    PLAYER, MONSTER, NPC
 }

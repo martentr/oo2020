@@ -16,10 +16,10 @@ public class Character {
     public Character(String name, CharacterType characterType){
         this.name = name;
         this.characterType = characterType;
-        this.direction = Direction.UP;
+        this.direction = Direction.RIGHT;
 
-        this.x = 30;
-        this.y = 30;
+        this.x = 1;
+        this.y = 1;
     }
 
     @Override
@@ -29,22 +29,19 @@ public class Character {
 
     void changeDirection(Direction direction){
         this.direction = direction;
-    }
-
-    String getXY(){
-        return name + " is at x: " + x + " y: " + y;
+        move();
     }
 
     void move(){
         switch (this.direction) {
             case UP:
-                this.y++;
+                this.y--;
                 break;
             case RIGHT:
                 this.x++;
                 break;
             case DOWN:
-                this.y--;
+                this.y++;
                 break;
             case LEFT:
                 this.x--;
@@ -53,7 +50,7 @@ public class Character {
                 break;
         }
 
-        System.out.println(getXY());
+        System.out.println(this);
     }
 
 }

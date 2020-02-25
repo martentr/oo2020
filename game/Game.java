@@ -9,8 +9,8 @@ public class Game {
     public static void main(String[] args) {
         World world = new World(20, 10);
         Character player = new Character("Raimo", CharacterType.PLAYER, "X");
-        Character enemy = new Character("Sipsik", CharacterType.MONSTER, "o");
-        Character npc = new Character("Helper", CharacterType.NPC, "N");
+        Character enemy = new Character(5, 5, "Sipsik", CharacterType.MONSTER, "o");
+        Character npc = new Character(3, 3, "Helper", CharacterType.NPC, "N");
 
         world.addCharacters(Arrays.asList(
             enemy, 
@@ -41,6 +41,8 @@ public class Game {
             if(player.x == enemy.x && player.y == enemy.y){
                 System.out.println("Yay!");
             }
+
+            world.render();
         }
 
     }

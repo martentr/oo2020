@@ -31,6 +31,12 @@ public class World {
                     symbol = " ";
                 }
 
+                for (Character c : characters){
+                    if (c.isVisible && c.x == x && c.y == y){
+                        symbol = c.getSymbol();
+                    }
+                }
+
                 System.out.print(symbol);
             }
 

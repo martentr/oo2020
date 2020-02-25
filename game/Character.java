@@ -5,6 +5,7 @@ public class Character {
 
     public int x;
     public int y;
+    public boolean isVisible = true;
 
     public String slogan = "";
     private String symbol = "?";
@@ -24,9 +25,23 @@ public class Character {
         this.y = 1;
     }
 
+    public Character(int x, int y, String name, CharacterType characterType, String symbol){
+        this.name = name;
+        this.characterType = characterType;
+        this.direction = Direction.RIGHT;
+        this.symbol = symbol;
+
+        this.x = x;
+        this.y = y;
+    }
+
     @Override
     public String toString(){
         return "My name is " + name + " and I am at x:" + x + " y:" + y + " and my slogan is: " + slogan;
+    }
+
+    String getSymbol(){
+        return this.symbol;
     }
 
     void changeDirection(Direction direction){
